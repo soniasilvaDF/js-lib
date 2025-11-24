@@ -34,9 +34,10 @@ export class Banner {
             target.innerHTML = `
                 ${this.getStyles()}
                 <div class="banner">
-                <h2>${this.title}</h2>
-                <p>${this.message}</p>
-                <p>Example API data: ${data?.user?.username}</p>
+                    <i class="df-icon-l df-icon-close float-right"></i>
+                    <h2>${this.title}</h2>
+                    <p>${this.message}</p>
+                    <p>Example API data: ${data?.user?.username}</p>
                 </div>
             `;
                 } catch (error) {
@@ -53,7 +54,33 @@ export class Banner {
         const s = this.settings;
         return `
       <style>
-        .banner {
+        
+        @font-face {
+            font-family: Icons-DF;
+            src: url(https://doutorfinancas.github.io/df-ui/Icons-DF.ttf) format("truetype");
+            font-weight: 400;
+            font-style: normal;
+            font-display: block
+        }
+
+        [class*=" df-icon-"],[class^=df-icon-] {
+            font-family: Icons-DF,sans-serif!important;
+            speak: never;
+            font-style: normal;
+            font-weight: 400;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+        }
+
+        .df-icon-close:before {
+            content: "\\e966";
+        }
+        .float-right {
+            float: right;
+        }
+
+        .banner {        
           border: 1px solid #ddd;
           border-radius: 8px;
           padding: 1rem;
