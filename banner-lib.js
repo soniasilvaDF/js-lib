@@ -112,3 +112,5 @@ export class Banner {
         return null;
     }
 }
+
+window.Banner = Banner;
