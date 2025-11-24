@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>POC</title>
+</head>
+<body>
+
+  Exemplo de integração do banner.
+
+  <script type="module">
+    import { Banner } from './banner-lib.js';
+
+    const banner = new Banner({
+      title: "Atenção",
+      settings: { width: "80%", top: "20px" },
+      apiUrl: 'https://clinica-frontops-api.staging.aws.doutorfinancas.pt/user/loginData'
+    });
+
+    banner.render("#banner-container");
+  </script>
+  <div id="banner-container"></div>
+
+</body>
+</html>
