@@ -9,17 +9,23 @@
   Exemplo de integração do banner.
 
   <script type="module">
-    import { Banner } from './banner-lib.js';
+    import { Banner } from 'https://soniasilvadf.github.io/js-lib/banner-lib.js';
 
     const banner = new Banner({
       title: "Atenção",
       settings: { width: "80%", top: "20px" },
-      apiUrl: 'https://clinica-frontops-api.staging.aws.doutorfinancas.pt/user/loginData'
+      appToken: 'XPTO'
     });
 
     banner.render("#banner-container");
   </script>
   <div id="banner-container"></div>
+
+  <style>/* to override styles:
+    .banner{
+      background: black;
+    }*/
+  </style>
 
 </body>
 </html>
