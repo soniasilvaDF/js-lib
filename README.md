@@ -83,6 +83,6 @@ The banner calls an external API to add data, and you can override it with:
 const banner = new Banner({
       title: "Atenção",
       settings: { width: "80%", top: "20px" },
-      appToken: 'https://clinica-frontops-api.staging.aws.doutorfinancas.pt//user/loginData'
+      apiUrl: 'https://clinica-frontops-api.staging.aws.doutorfinancas.pt//user/loginData'
     });
 ```
